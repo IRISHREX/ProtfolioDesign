@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Source+Code+Pro:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Make container take up the full viewport */
+.container {
+    display: flex;
+    height: 100vh;
+    background: radial-gradient(circle at 30% 30%, #0f2027, #1b262c, #3a506b); /* use dark blue and navy gradient */
+    background-size: cover; /* cover the whole container */
+    background-repeat: no-repeat; /* no repeat */
+    background-attachment: fixed; /* fixed to the viewport */
+    color: #00ffd8; /* neon green text */
+    justify-content: center; /* center child elements horizontally */
+    align-items: center; /* center child elements vertically */
+    font-family: 'Fira Sans', sans-serif;
+    animation: slideIn 0.5s forwards; /* animation to slide in */
+    box-shadow: 0px 0px 10px #00ffd8; /* neon green box-shadow */
+}
+
+/* Water droplet animation */
+.container:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: waterDroplet 3s linear infinite;
+}
+
+@keyframes waterDroplet {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100vw -100vh;
+    }
+}
+
+
+
+
+.infoContainer {
+    /* background-color: rgb(202, 9, 128); */
+    height: 61.4vh;
+    width: 77vw;
+    margin: 101px auto;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px 2px 20px #00ffd8; /* neon green shadow */
+    background: linear-gradient(to bottom, #000000, #434343); /* black to dark gray gradient */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.devinfo {
+    font-size: 50px;
+    display: flex;
+    align-items: initial;
+    flex-direction: column;
+    font-family: 'Source Code Pro', monospace;
+    color: #00ffd8; /* neon green */
+    text-shadow: 2px 2px #000; /* black shadow */
+    transition: all 0.2s ease-in-out; /* animation on hover */
+}
+
+.devinfo:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px #00ffd8; /* neon green shadow */
+}
+
+.hello {
+    font-size: 43px;
+    font-family: 'Source Code Pro', monospace;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+}
+
+.name {
+    font-size: 1.1em;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+}
+
+.about {
+    font-size: 0.9em;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+}
+
+.moreabout {
+    font-size: 0.5em;
+    margin-top: 24px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+}
+
+.buttons {
+    margin-top: 1em;
+    font-size: 18px;
+}
+.btn-sm {
+    font-size: 17px;
+    padding: 7px;
+    margin: 17px 0; /* add space between buttons */
+    border-radius: 15px; /* smaller border radius */
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909); /* same gradient as .btn */
+    color: white; /* white text */
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* animation on hover */
+}
+
+.btn-sm:hover {
+    background: linear-gradient(to left, #dd3910, #a0df0e, #e25909); /* reversed gradient */
+    color: #00ffd8; /* neon green */
+}
+
+.devPic img {
+    width: 33.3vh;
+    border-radius: 50%; /* round image */
+    box-shadow: 2px 2px 10px #00ffd8; /* neon green shadow */
+}
+
+
+.btn {
+    padding: 13px;
+    border-radius: 23px;
+    color: white;
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909);
+    font-weight: bold;
+    margin: 3px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.2s ease-in-out; /* animation on hover */
+    box-shadow: 0px 0px 10px #dd3910; /* adds a red glow */
+    animation: glow 1s ease-in-out infinite; /* adds a glowing animation */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0px 0px 10px #dd3910;
+    }
+    to {
+        box-shadow: 0px 0px 20px #dd3910;
+    }
+}
+
+.btn:hover {
+    background: linear-gradient(to left, #dd3910, #a0df0e, #e25909); /* reversed gradient */
+    color: #00ffd8; /* neon green */
+}
+
+
+
+.contactform{
+    padding: 0 47px;
+    font-family: 'Fira Sans', sans-serif;
+    margin: 88px;
+}
+
+.contactform h1{
+    font-family: 'Source Code Pro', monospace;
+    /* padding: 12px 0; */
+}
+
+.contactform form div{
+    padding: -5px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.contactform form div input{
+    /* width: 23vw; */
+    border-radius: 5px;
+    margin: 4px;
+    padding: 1px;
+}
+
+.contactform form{
+    margin: 0 30px;
+}
+
+
+#emailHelp{
+    font-size: 11px;
+    color: midnightblue;
+    margin: 0 5px;
+    padding: 3px 0 0;
+}
+
+#form-check{
+    flex-direction: row;
+}
+
+#form-check input{
+    width: 15px;
+    margin: 2px 0;
+}
+
+h1, h2, h3 {
+    color: #00ffd8; /* neon green */
+    text-shadow: 2px 2px #000; /* black shadow */
+}
+
+.blogItem {
+    margin: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.2em;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+    transition: all 0.2s ease-in-out; /* animation on hover */
+}
+
+.blogItem:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 10px #00ffd8; /* neon green shadow */
+}
+
+
+.blogcontainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    margin: 0;
+    background: linear-gradient(to bottom, #000000, #434343); /* black to dark gray gradient */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px #00ffd8; /* neon green shadow */
+    animation: neon-glow 1s ease-in-out infinite;
+}
+@keyframes neon-glow {
+    from {
+    box-shadow: 2px 2px 20px #00ffd8;
+    }
+    to {
+    box-shadow: 2px 2px 20px #00ffd8, 0 0 50px #00ffd8;
+    }
+    }
+
+p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #fff; /* white text */
+    text-shadow: 1px 1px #333; /* gray shadow */
+}
+
+.intro{
+    margin: 10px 88px;
+}
+
+.intro h2{
+    font-family: 'Fira Sans', sans-serif;
+    margin: 12px;
+}
+
+.intro p{
+    font-family: 'Source Code Pro', monospace;
+    margin: 12px;
+}
+
+.skillcontainer{
+    padding: 12px;
+}
+
+.skillItem{
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+}
+
+.skill {
+    width: 0px; /* start with 0 width */
+    height: 10px;
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909); /* gradient */
+    border: 2px solid #00ffd8; /* neon green border */
+    animation: fill-up 2s ease-in-out forwards; /* animation to fill up the skill bar */
+}
+
+@keyframes fill-up {
+    to {
+        width: 248px; /* end with full width */
+    }
+}
+
+
+.hundered {
+    width: 248px;
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909); /* gradient */
+}
+
+.fifty {
+    width: 124px;
+    background: linear-gradient(to right, #b72905, #719f07, #9e3e07); /* gradient */
+}
+
+.t5 {
+    width: 62px;
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909); /* gradient */
+    animation: fill-up 2s ease-in-out forwards; /* animation to fill up the skill bar */
+}
+
+
+.sidebarGo{
+    transform: translate(-200px, 0px);
+    position: absolute;
+}
+
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+}
+
+.hum{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+.cross{
+    margin-left: 162px;
+    margin-top: 4px;
+}
+/* Sidebar styles */
+.sidebar {
+    background: linear-gradient(to right, #dd3910, #a0df0e, #e25909), url(image.jpg); /* add background image */
+    background-size: cover; /* cover the whole sidebar */
+    font-family: 'Fira Sans', sans-serif;
+    color: #00ffd8; /* neon green text */
+    position: fixed; /* Position sidebar on the left */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20vw; /* Set width to 20% of viewport */
+    overflow-y: scroll; /* Enable scrolling if content overflows */
+    transition: transform 0.3s ease-in; /* Add transition for animation */
+    transform: translateX(-100%); /* Initially hide sidebar off-screen */
+    animation: slideIn 0.5s forwards; /* animation to slide in */
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.sidebar nav li a {
+    color: #00ffd8; /* neon green text */
+    text-decoration: none;
+    transition: color 0.2s ease-in; /* Add transition for hover effect
+.sidebar nav li a:hover {
+    color: #dd3910; /* change text color on hover */
+    text-shadow: 0px 0px 10px #00ffd8; /* add neon green text-shadow */
+}
+
+.sidebar nav li {
+    font-size: 23px;
+    list-style: none;
+    padding: 21px 0;
+    text-align: left;
+}
+
+/* Main content container */
+.main {
+    flex: 1; 
+    padding: 0 20vw; /* Add padding equal to sidebar width */
+}
+
+/* Add media queries for responsive design */
+@media (max-width: 768px) {
+    /* On small screens, make sidebar take up full screen */
+    .sidebar {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+    }
+    /* Remove padding from main content */
+    .main {
+        padding: 0;
+    }
+}
+
+/* Add animation to sidebar when toggling */
+.sidebar.sidebarGo {
+    animation: slideIn 0.3s ease-in;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Add animation to hamburger icon */
+.hamburger img {
+    animation: rotate 0.3s ease-in;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+/* rest of the code */
+
+
+/* Responsive Media Queries */
+@media only screen and (max-width: 900px) {
+    .container {
+      flex-wrap: wrap;
+    }
+    .sidebar {
+      width: 100%;
+      height: 50px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      overflow-x: hidden;
+    }
+    .main {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+  
+  /* Animation */
+  .infoContainer {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .devinfo {
+    animation: slideInLeft 1s ease-out;
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .devPic img {
+    animation: slideInRight 1s ease-out;
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  /* EXPERIENCE */
+
+/* Add styles for the cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 70%;
+    width: 90%;
+     margin-top: 5rem auto;
+    justify-content: space-around;
+    box-shadow: 2px 2px 20px #00ffd8; /* neon green shadow */
+    background: linear-gradient(to bottom, #000000, #434343); /* black to dark gray gradient */
+    padding: 20px;
+    border-radius: 30px;
+
+}
+.card {
+    width: 300px;
+    height: 400px;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000000;
+    transition: all 0.5s ease;
+    animation: glow card-animation 0.5s ease-in-out;
+}
+
+
+@keyframes card-animation {
+    from {width: 0;}
+    to {width: 100%;}
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #00ff00;
+    /* animation: glow 0.5s ease-in-out infinite; */
+}
+
+@keyframes glow {
+    0% { box-shadow: 0px 0px 10px #000000; }
+    50% { box-shadow: 0px 0px 20px #00ff00; }
+    100% { box-shadow: 0px 0px 10px #000000; }
+}
+
+
+  /* Add styles for the image in the card */
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+  }
+  /* Add styles for the description in the card */
+  .card p {
+    padding: 10px;
+  }
+
+  /* Add styles for the slider */
+  .slider {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to right, #ff0000, #ff00ff, #0000ff, #00ffff, #00ff00, #ffff00);
+    background-size: 600% 600%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.01rem auto;
+    justify-content: space-around;
+    box-shadow: 2px 2px 20px #00ffd8; /* neon green shadow */
+    background: linear-gradient(to bottom, #000000, #434343); /* black to dark gray gradient */
+    padding: 20px;
+    border-radius: 30px;
+    animation: AnimationName 30s ease infinite;
+  }
+  @keyframes AnimationName { 
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  .slide {
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 36px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #ffffff;
+  }
+  .prev {
+    left: 10px;
+  }
+  .next {
+    right: 10px;
+  }
+  .prev:hover, .next:hover {
+    color: #ffffff;
+  }
+  /* Add styles for the dots */
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  .active, .dot:hover {
+    background-color: #717171;
+  }
